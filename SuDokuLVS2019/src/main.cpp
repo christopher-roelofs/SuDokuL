@@ -228,15 +228,15 @@ int main(int argv, char** args) {
 	/* Controller */
 #if defined(SDL1)
 	SDL_JoystickEventState(SDL_ENABLE);
-	controller = SDL_JoystickOpen(0);
+	//controller = SDL_JoystickOpen(0);
 	SDL_JoystickEventState(SDL_ENABLE);
 #elif defined(PSP)
 	SDL_SetHint(SDL_HINT_JOYSTICK_ALLOW_BACKGROUND_EVENTS, "1");
-	controller = SDL_JoystickOpen(0);
+	//controller = SDL_JoystickOpen(0);
 #else
 	for (i = 0; i < SDL_NumJoysticks(); i++) {
 		if (SDL_IsGameController(i)) {
-			controller = SDL_GameControllerOpen(i);
+			//controller = SDL_GameControllerOpen(i);
 			break;
 		}
 	}
